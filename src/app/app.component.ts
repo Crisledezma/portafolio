@@ -14,6 +14,6 @@ export class AppComponent {
 
   constructor(private translate: TranslateService) {
     const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang || 'es');
+    this.translate.use(browserLang || 'en');
   }
 }

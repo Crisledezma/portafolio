@@ -1,27 +1,81 @@
 <div class="container">
   <div class="row">
-    <div class="col-6 text-end mt-5 pe-5">
-      <h1>Cristian Ledezma</h1>
-      <h3>Web/Software Engineer</h3>
-      <p class="mt-5 text-align-justify">{{ 'WhatIDo' | translate }}</p>
-    </div>
-    <div class="col-6 ps-5 mt-5 text-align-justify">
-      <p>{{ 'LedezmaStory' | translate }}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <div>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    <div class="col-6 text-end my-5 pe-5">
+      <div class="row my-5">
+        <div class="col-12">
+          <h1>Cristian Ledezma</h1>
+          <h3>{{ "LedezmaPosition" | translate }}</h3>
+          <p class="mt-5 text-align-justify">{{ 'WhatIDo' | translate }}</p>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col-6"></div>
+        <div class="col-6 text-start my-5">
+          <ul class="my-5">
+            <li class="my-2"
+              (mouseenter)="highlightText(LedezmaStory)"
+              (mouseleave)="darkenText(LedezmaStory)"
+              (click)="scrollToSection('LedezmaStory')"
+            >
+              {{ 'About' | translate }}
+            </li>
+            <li class="my-2"
+              (mouseenter)="highlightText(ExperienceSection)"
+              (mouseleave)="darkenText(ExperienceSection)"
+              (click)="scrollToSection('ExperienceSection')"
+            >
+              {{ 'Experience' | translate }}
+            </li>
+            <li class="my-2"
+              (mouseenter)="highlightText(ProjectsSection)"
+              (mouseleave)="darkenText(ProjectsSection)"
+              (click)="scrollToSection('ProjectsSection')"
+            >
+              {{ 'Projects' | translate }}
+            </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </div>
-    <div class="col-6"></div>
+    <div class="col-6 ps-5">
+      <section #StorySection>
+        <div class="row">
+          <p #LedezmaStory class="mt-5 text-align-justify">
+            {{ 'LedezmaStory' | translate }}
+          </p>
+        </div>
+      </section>
+      <section #ExperienceSection class="my-5">
+        <a href="https://soefe.com/" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-3">
+              <p>{{ '2022-Present' | translate }}</p>
+            </div>
+            <div class="col-9">
+              <p class="fw-bolder">Soefe (Software Efectivo) {{ "LedezmaPosition" | translate }}</p>
+              <p>{{ 'SoefeDescription' | translate }}</p>
+              <span class="badge badge-info">Ionic</span>
+              <span class="badge badge-info ms-1">Angular</span>
+              <span class="badge badge-info ms-1">TypeScript</span>
+              <span class="badge badge-info ms-1">JavaScript</span>
+              <span class="badge badge-info ms-1">HTML</span>
+              <span class="badge badge-info ms-1">CSS</span>
+              <span class="badge badge-info ms-1">WordPress</span>
+            </div>
+          </div>
+        </a>
+      </section>
+      <section #ProjectsSection class="my-5">
+        <a href="https://whoppercr.com" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-6">
+              <iframe src="https://whoppercr.com" frameborder="0"></iframe>
+            </div>
+            <div class="col-6">
+              <p><b>BK APP: </b>{{ "BKRole" | translate }}</p>
+            </div>
+          </div>
+        </a>
+      </section>
   </div>
 </div>

@@ -6,7 +6,7 @@ import { routes } from './app.routes';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { provideClientHydration } from '@angular/platform-browser';
-import { provideHttpClient, HttpClient } from '@angular/common/http';
+import { provideHttpClient, HttpClient, withFetch } from '@angular/common/http';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -17,10 +17,12 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
-    provideHttpClient(),
+    provideHttpClient(
+      withFetch()
+    ),
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'es',
+        defaultLanguage: 'en',
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,

@@ -1,3 +1,38 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+li:hover {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+ul li::before {
+  content: "\27A4";
+  color: red;      
+  font-size: 20px; 
+  margin-right: 10px;
+}
+ul li:hover::before {
+  color: green;
+}
 .text-align-justify {
   text-align: justify;
+}
+.expanded-text {
+  z-index: 1000; /* Asegura que el texto esté por encima de otros elementos */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in-out; /* Añade una transición suave */
+}
+.badge-info {
+  background-color: #17a2b8;
+}
+.experience-frame:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
