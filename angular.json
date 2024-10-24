@@ -15,11 +15,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/portafolio",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js",
               "@angular/localize/init"
@@ -36,12 +36,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,18 +58,26 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "static-deploy": {
+              "optimization": true,
+              "outputPath": "docs",
+              "baseHref": "/portafolio/",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "outputHashing": "all"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "static-deploy"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portafolio:build:production"
+              "browserTarget": "portafolio:build:production"
             },
             "development": {
-              "buildTarget": "portafolio:build:development"
+              "browserTarget": "portafolio:build:development"
             }
           },
           "defaultConfiguration": "development"
