@@ -36,3 +36,29 @@ ul li:hover::before {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
+/* Columna Izquierda (Estática) */
+#left-column {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%; /* Ajusta el ancho según tus necesidades */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow-y: auto; /* Permite scroll interno si el contenido supera la altura */
+}
+/* Columna Derecha (Scrollable) */
+#right-column {
+  margin-left: 50%; /* Deja espacio para la columna izquierda fija */
+  width: 50%; /* Ajusta el ancho según tus necesidades */
+  overflow-y: auto;
+  padding-top: 20px; /* Ajusta el padding según sea necesario */
+}
+@media (max-width: 768px) {
+  /* Restablecer estilos para pantallas pequeñas */
+  #left-column,
+  #right-column {
+    position: static;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+}
