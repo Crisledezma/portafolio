@@ -3,9 +3,13 @@
   "WhatIDo": "I create sites and apps using the latests technologies and best practices.",
   "About": "About",
   "Experience": "Experience",
-  "2022-Present": "2022-Present",
+  "2020-Present": "2020-Present",
   "LedezmaPosition": "Web/Software Engineer",
   "SoefeDescription": "At Soefe, I have focused on projecting myself in the most professional way possible, working alongside a team that has allowed me to grow and develop in the software production environment. I’ve had the opportunity to work on projects for well-known brands and have kept up to date with technologies like React, Angular, WordPress, Ionic, and more.",
   "BKRole": "I developed multiple features and a large part of the user interface for the Burger King Costa Rica app. The app allows users to place orders online, view the menu, and receive exclusive promotions.",
-  "Projects": "Projects"
+  "Projects": "Projects",
+  "PHRole": "Most of the functionality and design were developed by my team. We worked closely with our customer to deliver the best user experience while simultaneously enhancing sales.",
+  "DominosRole": "This application is based on a custom template developed by our team, resulting in a multi-company app capable of managing different clients with both shared and independent layers of functionality. The same applies to the design.",
+  "VitherapyRole": "I fully developed this website in WordPress using native CMS tools such as Elementor, custom themes, and functionalities like forms and inventory management.",
+  "EchandiRole": "On this page, I developed a fully customized widget that displays detailed information about each company location when the user selects it from a dropdown menu."
 }
