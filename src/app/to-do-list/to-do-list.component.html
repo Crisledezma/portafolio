@@ -1,0 +1,11 @@
+<!-- two line list -->
+<mat-selection-list #ToDo>
+  <mat-list-option *ngFor="let item of toDoService.toDoList" [selected]="item.completed">
+    <p matLine>ID: {{item.id}}
+      <span>Description: {{item.description}} </span>
+      <span class="demo-2">Completed -- {{item.completed}} </span>
+      <button mat-raised-button color="primary" (click)="deleteItem(item)">Toggle</button>
+    </p>
+  </mat-list-option>
+</mat-selection-list>
+<p>Options selected: {{ toDoService.toDoList.length }}</p>

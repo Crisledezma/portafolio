@@ -4,36 +4,46 @@
     <div class="col-6 text-end my-5 pe-5" id="left-column">
       <!-- Contenido de la columna izquierda -->
       <div class="row my-5">
-        <div class="col-12">
+        <div class="col-6">
+          <img
+            src="./assets/images/profile_pic.jpg"
+            class="img-thumbnail rounded-circle h-50"
+            alt="personal photo"
+          />
+        </div>
+        <div class="col-6">
           <h1>Cristian Ledezma</h1>
           <h3>{{ "LedezmaPosition" | translate }}</h3>
-          <p class="mt-5 text-align-end">{{ 'WhatIDo' | translate }}</p>
+          <p class="mt-5 text-align-end">{{ "WhatIDo" | translate }}</p>
         </div>
       </div>
       <div class="row my-5">
         <div class="col-6"></div>
         <div class="col-6 text-start my-5">
           <ul class="my-5">
-            <li class="my-2"
+            <li
+              class="my-2"
               (mouseenter)="highlightText(LedezmaStory)"
               (mouseleave)="darkenText(LedezmaStory)"
               (click)="scrollToSection('LedezmaStory')"
             >
-              {{ 'About' | translate }}
+              {{ "About" | translate }}
             </li>
-            <li class="my-2"
+            <li
+              class="my-2"
               (mouseenter)="highlightText(ExperienceSection)"
               (mouseleave)="darkenText(ExperienceSection)"
               (click)="scrollToSection('ExperienceSection')"
             >
-              {{ 'Experience' | translate }}
+              {{ "Experience" | translate }}
             </li>
-            <li class="my-2"
+            <li
+              class="my-2"
               (mouseenter)="highlightText(ProjectsSection)"
               (mouseleave)="darkenText(ProjectsSection)"
               (click)="scrollToSection('ProjectsSection')"
             >
-              {{ 'Projects' | translate }}
+              {{ "Projects" | translate }}
             </li>
           </ul>
         </div>
@@ -46,7 +56,7 @@
       <section #StorySection class="my-5">
         <div class="row mb-5">
           <p #LedezmaStory class="my-5 text-align-justify">
-            {{ 'LedezmaStory' | translate }}
+            {{ "LedezmaStory" | translate }}
           </p>
         </div>
       </section>
@@ -54,11 +64,13 @@
         <a href="https://soefe.com/" target="_blank">
           <div class="row my-5 text-align-start experience-frame">
             <div class="col-3 my-5">
-              <p>{{ '2022-Present' | translate }}</p>
+              <p>{{ "2020-Present" | translate }}</p>
             </div>
             <div class="col-9">
-              <p class="fw-bolder">Soefe (Software Efectivo) {{ "LedezmaPosition" | translate }}</p>
-              <p>{{ 'SoefeDescription' | translate }}</p>
+              <p class="fw-bolder">
+                Soefe (Software Efectivo) {{ "LedezmaPosition" | translate }}
+              </p>
+              <p>{{ "SoefeDescription" | translate }}</p>
               <span class="badge badge-info">Ionic</span>
               <span class="badge badge-info ms-1">Angular</span>
               <span class="badge badge-info ms-1">TypeScript</span>
@@ -71,6 +83,7 @@
         </a>
       </section>
       <section #ProjectsSection class="my-5">
+        <!-- BK -->
         <a href="https://whoppercr.com" target="_blank">
           <div class="row mt-5 text-align-start experience-frame">
             <div class="col-6">
@@ -78,6 +91,58 @@
             </div>
             <div class="col-6">
               <p><b>BK APP: </b>{{ "BKRole" | translate }}</p>
+            </div>
+          </div>
+        </a>
+        <!-- Pizza Hut -->
+        <a href="https://pizzahutcr.com/external" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-6">
+              <p><b>Pizza Hut APP: </b>{{ "PHRole" | translate }}</p>
+            </div>
+            <div class="col-6">
+              <iframe
+                src="https://pizzahutcr.com/external"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+        </a>
+        <!-- Domino's Pizza -->
+        <a href="https://dominos.cr/" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-6">
+              <iframe src="https://dominos.cr/" frameborder="0"></iframe>
+            </div>
+            <div class="col-6">
+              <p><b>Domino's APP: </b>{{ "DominosRole" | translate }}</p>
+            </div>
+          </div>
+        </a>
+        <!-- Vitherapy Website -->
+        <a href="https://vitherapy.cr/" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-6">
+              <p><b>Vitherapy Website: </b>{{ "VitherapyRole" | translate }}</p>
+            </div>
+            <div class="col-6">
+              <iframe src="https://vitherapy.cr/" frameborder="0"></iframe>
+            </div>
+          </div>
+        </a>
+        <!-- Echandi Website -->
+        <a href="https://labechandi.com/sedes" target="_blank">
+          <div class="row mt-5 text-align-start experience-frame">
+            <div class="col-6">
+              <iframe
+                src="https://labechandi.com/sedes"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="col-6">
+              <p>
+                <b>Lab. Echandi Widgets: </b>{{ "EchandiRole" | translate }}
+              </p>
             </div>
           </div>
         </a>
